@@ -1,0 +1,246 @@
+{
+  "introduction_to_database": [
+    {
+      "keywords": ["database", "define database", "what is database", "meaning of database", "explain database"],
+      "answer": "A database is a structured collection of data stored electronically. Example: A school database stores information about students, teachers, and courses."
+    },
+    {
+      "keywords": ["purpose of database", "why use database", "importance of database", "database use"],
+      "answer": "The purpose of a database is to store, organize, and manage large amounts of data efficiently. Example: Banks use databases to store account information and transactions."
+    },
+    {
+      "keywords": ["types of database", "database types", "kinds of databases", "different types of databases"],
+      "answer": "There are several types of databases: Relational (tables and rows), NoSQL (document, key-value, graph), and Distributed databases. Example: MySQL is a relational database, MongoDB is a NoSQL database."
+    },
+    {
+      "keywords": ["example of database", "real world database", "database examples", "sample database"],
+      "answer": "Examples of databases include library management systems, hospital records, online banking systems, and e-commerce websites."
+    },
+    {
+      "keywords": ["characteristics of database", "features of database", "database properties"],
+      "answer": "A good database has characteristics like organized structure, easy retrieval, minimal redundancy, security, and consistency. Example: Student info is stored systematically in rows and columns."
+    }
+  ],
+
+  "dbms": [
+    {
+      "keywords": ["DBMS", "define DBMS", "what is DBMS", "database management system", "DBMS meaning"],
+      "answer": "A DBMS (Database Management System) is software used to create, manage, and control databases. Example: MySQL, Oracle, and PostgreSQL are popular DBMS."
+    },
+    {
+      "keywords": ["advantages of DBMS", "DBMS benefits", "why use DBMS", "DBMS importance"],
+      "answer": "Advantages of DBMS include data consistency, reduced redundancy, easy access, better security, and backup management. Example: Using a DBMS prevents duplicate student records."
+    },
+    {
+      "keywords": ["functions of DBMS", "DBMS functions", "what DBMS does", "DBMS operations"],
+      "answer": "DBMS functions include data storage, retrieval, updating, security, and backup. Example: MySQL allows you to query and update student data securely."
+    },
+    {
+      "keywords": ["types of DBMS", "DBMS types", "different types of DBMS", "DBMS classification"],
+      "answer": "DBMS types include Hierarchical, Network, Relational, and Object-oriented DBMS. Example: Oracle is a relational DBMS, MongoDB is a NoSQL DBMS."
+    },
+    {
+      "keywords": ["examples of DBMS", "DBMS examples", "popular DBMS"],
+      "answer": "Popular DBMS software includes Oracle, MySQL, Microsoft SQL Server, PostgreSQL, and MongoDB."
+    }
+  ],
+
+  "rdbms": [
+    {
+      "keywords": ["RDBMS", "define RDBMS", "what is RDBMS", "relational DBMS", "RDBMS meaning"],
+      "answer": "RDBMS stands for Relational Database Management System. It stores data in tables with rows and columns and uses relationships between tables. Example: MySQL is an RDBMS."
+    },
+    {
+      "keywords": ["features of RDBMS", "RDBMS features", "RDBMS characteristics", "RDBMS properties"],
+      "answer": "Features of RDBMS include table structure, primary and foreign keys, SQL support, data integrity, and support for relationships. Example: Students table linked with Enrollment table using StudentID."
+    },
+    {
+      "keywords": ["advantages of RDBMS", "RDBMS benefits", "why use RDBMS", "RDBMS importance"],
+      "answer": "Advantages include easy data access, maintaining relationships between tables, reduced redundancy, and support for SQL queries."
+    },
+    {
+      "keywords": ["examples of RDBMS", "RDBMS examples", "popular RDBMS"],
+      "answer": "Examples of RDBMS include MySQL, Oracle, SQL Server, and PostgreSQL. They all store data in tables and support SQL."
+    },
+    {
+      "keywords": ["difference between DBMS and RDBMS", "DBMS vs RDBMS", "DBMS and RDBMS difference"],
+      "answer": "DBMS stores data as files, RDBMS stores data in tables with relationships. RDBMS supports SQL and maintains data integrity while DBMS may not."
+    }
+  ],
+
+  "types_of_keys": [
+    {
+      "keywords": ["primary key", "define primary key", "what is primary key"],
+      "answer": "A primary key uniquely identifies each record in a table. It cannot be NULL. Example: StudentID in a Students table."
+    },
+    {
+      "keywords": ["foreign key", "define foreign key", "what is foreign key"],
+      "answer": "A foreign key creates a relationship between tables by referencing the primary key of another table. Example: Enrollment.StudentID refers to Students.StudentID."
+    },
+    {
+      "keywords": ["unique key", "define unique key", "what is unique key"],
+      "answer": "A unique key ensures all values in a column are distinct. It can allow NULL values. Example: Email column in Students table."
+    },
+    {
+      "keywords": ["composite key", "define composite key", "what is composite key"],
+      "answer": "A composite key is made of two or more columns to uniquely identify a record. Example: (StudentID, CourseID) in Enrollment table."
+    },
+    {
+      "keywords": ["candidate key", "define candidate key", "what is candidate key"],
+      "answer": "Candidate keys are columns that can qualify as primary keys. Example: Both StudentID and Email can be candidate keys."
+    },
+    {
+      "keywords": ["super key", "define super key", "what is super key"],
+      "answer": "A super key is a set of one or more columns that can uniquely identify a record. Example: (StudentID, Email) in Students table."
+    },
+    {
+      "keywords": ["alternate key", "define alternate key", "what is alternate key"],
+      "answer": "An alternate key is any candidate key that is not selected as the primary key. Example: Email column if StudentID is primary key."
+    }
+  ],
+
+  "sql_commands": [
+    {
+      "keywords": ["select", "select command", "what is select"],
+      "answer": "SELECT retrieves data from a table. Example: SELECT Name FROM Students;"
+    },
+    {
+      "keywords": ["insert", "insert command", "what is insert"],
+      "answer": "INSERT adds new records. Example: INSERT INTO Students (ID, Name) VALUES (1, 'Sneha');"
+    },
+    {
+      "keywords": ["update", "update command", "what is update"],
+      "answer": "UPDATE modifies existing records. Example: UPDATE Students SET Marks = 98 WHERE ID = 1;"
+    },
+    {
+      "keywords": ["delete", "delete command", "what is delete"],
+      "answer": "DELETE removes records. Example: DELETE FROM Students WHERE ID = 1;"
+    },
+    {
+      "keywords": ["create table", "create command", "what is create table"],
+      "answer": "CREATE TABLE defines a new table. Example: CREATE TABLE Students (ID INT, Name VARCHAR(50));"
+    },
+    {
+      "keywords": ["drop table", "drop command", "what is drop"],
+      "answer": "DROP TABLE deletes a table permanently. Example: DROP TABLE Students;"
+    },
+    {
+      "keywords": ["alter table", "alter command", "what is alter"],
+      "answer": "ALTER TABLE modifies a table structure. Example: ALTER TABLE Students ADD Age INT;"
+    },
+    {
+      "keywords": ["truncate", "truncate table"],
+      "answer": "TRUNCATE TABLE deletes all data but keeps table structure. Example: TRUNCATE TABLE Students;"
+    },
+    {
+      "keywords": ["where clause", "using where", "what is where"],
+      "answer": "WHERE filters records based on conditions. Example: SELECT * FROM Students WHERE Marks > 80;"
+    },
+    {
+      "keywords": ["order by", "sorting", "order clause"],
+      "answer": "ORDER BY sorts results ascending or descending. Example: SELECT * FROM Students ORDER BY Marks DESC;"
+    },
+    {
+      "keywords": ["group by", "grouping", "group clause"],
+      "answer": "GROUP BY groups records for aggregation. Example: SELECT Marks, COUNT(*) FROM Students GROUP BY Marks;"
+    },
+    {
+      "keywords": ["having", "having clause"],
+      "answer": "HAVING filters groups after aggregation. Example: SELECT Marks, COUNT(*) FROM Students GROUP BY Marks HAVING COUNT(*) > 1;"
+    }
+  ],
+
+  "joins": [
+    {
+      "keywords": ["join", "joins", "what is join", "explain join", "types of joins"],
+      "answer": "A JOIN is used in SQL to combine rows from two or more tables based on a related column between them. Example: If we have a Students table and an Enrollment table, we can use a JOIN to find which students are enrolled in which courses."
+    },
+    {
+      "keywords": ["inner join", "define inner join", "what is inner join"],
+      "answer": "INNER JOIN returns rows with matching values in both tables. Example: SELECT Students.Name, Enrollment.CourseID FROM Students INNER JOIN Enrollment ON Students.ID = Enrollment.StudentID;"
+    },
+    {
+      "keywords": ["left join", "define left join", "what is left join"],
+      "answer": "LEFT JOIN returns all rows from the left table and matching rows from the right. NULL if no match. Example: SELECT Students.Name, Enrollment.CourseID FROM Students LEFT JOIN Enrollment ON Students.ID = Enrollment.StudentID;"
+    },
+    {
+      "keywords": ["right join", "define right join", "what is right join"],
+      "answer": "RIGHT JOIN returns all rows from the right table and matching rows from the left. NULL if no match. Example: SELECT Students.Name, Enrollment.CourseID FROM Students RIGHT JOIN Enrollment ON Students.ID = Enrollment.StudentID;"
+    },
+    {
+      "keywords": ["full outer join", "define full join", "what is full join"],
+      "answer": "FULL OUTER JOIN returns all rows from both tables, NULL if no match. Example: SELECT Students.Name, Enrollment.CourseID FROM Students FULL OUTER JOIN Enrollment ON Students.ID = Enrollment.StudentID;"
+    },
+    {
+      "keywords": ["cross join", "cartesian product", "define cross join"],
+      "answer": "CROSS JOIN returns all possible combinations of rows. Example: Students with 3 rows and Courses with 2 rows gives 6 rows total."
+    },
+    {
+      "keywords": ["self join", "joining table with itself", "define self join"],
+      "answer": "SELF JOIN joins a table with itself. Example: Employee table showing Employee and Manager using EmployeeID and ManagerID."
+    }
+  ],
+
+  "tables_rows_columns": [
+    {
+      "keywords": ["table", "define table", "what is table"],
+      "answer": "A table is a collection of rows and columns storing data. Example: Students table stores student info."
+    },
+    {
+      "keywords": ["row", "record", "tuple", "define row"],
+      "answer": "A row represents a single record. Example: (1, 'Sneha', 17, 95)"
+    },
+    {
+      "keywords": ["column", "field", "attribute", "define column"],
+      "answer": "A column represents a single type of data. Example: Name column stores student names like 'Sneha'."
+    },
+    {
+      "keywords": ["difference between row and column", "row vs column", "row and column difference"],
+      "answer": "A row stores a single record, a column stores a specific field for all records. Example: Row: (1, 'Sneha', 17), Column: Name = 'Sneha'."
+    },
+    {
+      "keywords": ["primary key in table", "define primary key in table"],
+      "answer": "Primary key in a table uniquely identifies each row. Example: StudentID in Students table."
+    },
+    {
+      "keywords": ["how to create table", "creating table", "table creation"],
+      "answer": "Tables are created using CREATE TABLE command. Example: CREATE TABLE Students (ID INT, Name VARCHAR(50), Age INT);"
+    },
+    {
+      "keywords": ["adding column", "add new column", "alter table add column"],
+      "answer": "You can add a new column using ALTER TABLE. Example: ALTER TABLE Students ADD Grade VARCHAR(5);"
+    },
+    {
+      "keywords": ["deleting column", "drop column", "remove column"],
+      "answer": "A column can be removed using ALTER TABLE DROP COLUMN. Example: ALTER TABLE Students DROP COLUMN Grade;"
+    },
+    {
+      "keywords": ["adding row", "insert row", "new record"],
+      "answer": "Insert a row using INSERT command. Example: INSERT INTO Students (ID, Name, Age) VALUES (2, 'Rahul', 18);"
+    },
+    {
+      "keywords": ["deleting row", "remove row", "delete record"],
+      "answer": "Delete a row using DELETE command. Example: DELETE FROM Students WHERE ID = 2;"
+    },
+    {
+      "keywords": ["updating row", "modify row", "update record"],
+      "answer": "Update a row using UPDATE command. Example: UPDATE Students SET Age = 19 WHERE ID = 2;"
+    },
+    {
+      "keywords": ["data types in column", "column types", "different data types"],
+      "answer": "Columns have data types like INT, VARCHAR, DATE, FLOAT. Example: Age INT, Name VARCHAR(50)."
+    },
+    {
+      "keywords": ["constraints in table", "table constraints", "column constraints"],
+      "answer": "Constraints ensure data integrity, e.g., NOT NULL, UNIQUE, PRIMARY KEY. Example: ID INT PRIMARY KEY NOT NULL."
+    },
+    {
+      "keywords": ["table normalization", "normalize table", "normalization"],
+      "answer": "Normalization organizes tables to reduce redundancy. Example: Separate Student and Enrollment tables instead of one large table."
+    },
+    {
+      "keywords": ["view in table", "database view", "what is view"],
+      "answer": "A view is a virtual table created from a query. Example: CREATE VIEW StudentView AS SELECT Name, Age FROM Students;"
+    }
+  ]
+}
