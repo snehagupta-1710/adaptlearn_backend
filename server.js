@@ -11,50 +11,49 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Setup CORS properly (allow both local + deployed frontend)
+// ✅ Proper CORS setup (local + Netlify frontend)
 const corsOptions = {
   origin: [
-    "http://127.0.0.1:3000",                  // for local testing
+    "http://127.0.0.1:3000",                  // for local development
     "https://adaptlearn-frontend.netlify.app" // your deployed frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 
-// ✅ Handle all OPTIONS requests
-app.use((req, res, next) => {
-  if (req.method === "OPTIONS") {
-    res.header("Access-Control-Allow-Origin", req.headers.origin);
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    return res.sendStatus(204);
-  }
-  next();
-});
-
-// ✅ Prevent browser caching (optional)
+// ✅ Disable caching (optional, but helps prevent stale responses)
 app.use((req, res, next) => {
   res.setHeader("Cache-Control", "no-store");
   next();
 });
 
+// ✅ Middlewares
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Routes
+// ✅ API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/progress", progressRoutes);
 app.use("/api/quiz", quizRoutes);
 
-// ✅ MongoDB connect
+// ✅ Default route for testing
+app.get("/", (req, res) => {
+  res.send("AdaptLearn Backend is running ✅");
+});
+
+// ✅ MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB connected"))
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("✅ MongoDB connected successfully"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// ✅ Start server
+// ✅ Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
